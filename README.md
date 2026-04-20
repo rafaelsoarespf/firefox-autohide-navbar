@@ -80,3 +80,89 @@ Close and reopen Firefox to apply the changes.
 ## 📄 License
 
 MIT
+
+---
+
+## 🇧🇷 Português
+
+### 👻 Barra de navegação fantasma
+
+> Ocultar automaticamente a barra de navegação do Firefox usando `userChrome.css` com transições suaves e revelação instantânea.
+
+## ✨ Recursos
+
+- 🧊 Ocultar automaticamente a barra de navegação
+- 🎯 Revelar ao passar o mouse ou focar
+- ⚡ Animação suave
+- 🧩 Leve (CSS puro)
+
+---
+
+## 📦 Instalação
+
+### 1. Habilite o suporte do userChrome
+
+No Firefox, digite o seguinte na barra de endereço e pressione Enter:
+
+```
+about:config
+```
+
+Procure por:
+```
+toolkit.legacyUserProfileCustomizations.stylesheets
+```
+
+Altere o valor para `true`.
+
+### 2. Abra a pasta de perfil do Firefox
+
+Na barra de endereço do Firefox, digite:
+
+```
+about:support
+```
+
+Pressione Enter.
+
+Na seção **"Pasta de perfil"**, clique em:
+
+👉 **"Abrir pasta"**
+
+Isso abrirá o diretório correto do perfil do Firefox.
+
+⚠️ Não use uma pasta aleatória — deve ser a pasta do perfil do Firefox aberta nesta etapa.
+
+💡 Caminho de exemplo (Windows):
+
+```
+C:\Users\SeuUsuário\AppData\Roaming\Mozilla\Firefox\Profiles\xxxx.default-release\
+```
+
+### 3. Crie a pasta `chrome`
+
+Dentro desta pasta de perfil, crie:
+
+```
+chrome/
+```
+
+### 4. Adicione o arquivo `userChrome.css`
+
+Coloque o arquivo:
+
+```
+userChrome.css
+```
+
+dentro da pasta `chrome`.
+
+### 5. Reinicie o Firefox
+
+Feche e reabra o Firefox para aplicar as alterações.
+
+---
+
+## 📄 Licença
+
+MIT
