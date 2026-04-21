@@ -1,4 +1,16 @@
-/* 1. CONTAINER PRINCIPAL */
+:root {
+  /* Animation settings */
+  --navbar-speed: 0.8s;
+  --navbar-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Positioning */
+  --navbar-offset: -100%;
+  --navbar-visible-offset: 5px;
+  --navbar-trigger-height: 12px;
+  --urlbar-offset: -260%;
+}
+
+/* 1. MAIN CONTAINER */
 #navigator-toolbox {
   border: none !important;
   position: fixed !important;
@@ -6,31 +18,34 @@
   width: 100%;
   z-index: 1000 !important;
 
-  transition: transform 0.6s ease-in-out !important;
-  transform: translateY(calc(-100% + 8px)) !important;
+  transform: translateY(calc(var(--navbar-offset) + var(--navbar-visible-offset))) !important;
+  transition: transform var(--navbar-speed) var(--navbar-easing) !important;
+  will-change: transform;
 }
 
-#urlbar{
-  transition: transform 0.6s ease-in-out !important;
-  transform: translateY(-240%) !important;
+/* 2. URL BAR */
+#urlbar {
+  transform: translateY(var(--urlbar-offset)) !important;
+  transition: transform var(--navbar-speed) var(--navbar-easing) !important;
 }
 
-
-/* 2. MOSTRAR AO PASSAR O MOUSE */
+/* 3. SHOW ON HOVER OR FOCUS */
 #navigator-toolbox:hover,
-#navigator-toolbox:focus-within,
-#navigator-toolbox:hover #urlbar,
-#navigator-toolbox:focus-within #urlbar{
+#navigator-toolbox:focus-within {
   transform: translateY(0) !important;
 }
 
-/* 3. ÁREA DE CONTATO (GATILHO) */
+#navigator-toolbox:hover #urlbar,
+#navigator-toolbox:focus-within #urlbar {
+  transform: translateY(0) !important;
+}
+
+/* 4. TRIGGER AREA */
 #navigator-toolbox::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  height: 15px;
+  height: var(--navbar-trigger-height);
 }
-
