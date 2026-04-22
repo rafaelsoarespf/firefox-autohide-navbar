@@ -2,6 +2,8 @@
 
 > Auto-hiding Firefox navbar using `userChrome.css` with smooth transitions and hover reveal.
 
+![Preview](preview.gif)
+
 ## ✨ Features
 
 - 🧊 Auto-hide navigation bar
@@ -88,6 +90,8 @@ MIT
 ### 👻 Barra de navegação fantasma
 
 > Ocultar automaticamente a barra de navegação do Firefox usando `userChrome.css` com transições suaves e revelação instantânea.
+
+![Preview](preview.gif)
 
 ## ✨ Recursos
 
